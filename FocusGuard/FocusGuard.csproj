@@ -60,6 +60,21 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Compile Include="src\FocusGuard.Application\DTOs\BlockRuleDto.cs" />
+    <Compile Include="src\FocusGuard.Application\Interfaces\IRuleEngine.cs" />
+    <Compile Include="src\FocusGuard.Application\Services\BlockingOrchestrator.cs" />
+    <Compile Include="src\FocusGuard.Application\Services\RuleService.cs" />
+    <Compile Include="src\FocusGuard.Application\Services\ScheduleService.cs" />
+    <Compile Include="src\FocusGuard.Application\Validators\BlockRuleValidator.cs" />
+    <Compile Include="src\FocusGuard.Domain\Entities\BlockRule.cs" />
+    <Compile Include="src\FocusGuard.Domain\Entities\BlockSchedule.cs" />
+    <Compile Include="src\FocusGuard.Domain\Entities\UserProfile.cs.cs" />
+    <Compile Include="src\FocusGuard.Domain\Exceptions\DomainValidationException.cs" />
+    <Compile Include="src\FocusGuard.Domain\Interfaces\IBlocker.cs" />
+    <Compile Include="src\FocusGuard.Domain\Interfaces\IClock.cs" />
+    <Compile Include="src\FocusGuard.Domain\Interfaces\IRuleRepository.cs" />
+    <Compile Include="src\FocusGuard.Domain\ValueOfObjects\DomainName.cs" />
+    <Compile Include="src\FocusGuard.Domain\ValueOfObjects\TimeRange.cs" />
     <Page Include="Page1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -97,6 +112,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\FocusGuard.Infrastructure\Persistence\SQLite\" />
   </ItemGroup>
   <PropertyGroup>
     <StartArguments />
